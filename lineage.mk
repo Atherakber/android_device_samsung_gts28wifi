@@ -5,7 +5,7 @@ $(call inherit-product, device/samsung/gts2-common/device-common.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 ## Device identifier. This must come after all inclusions
@@ -14,6 +14,8 @@ PRODUCT_DEVICE := gts28wifi
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T710
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
+BUILD_FINGERPRINT := samsung/gts28wifixx/gts28wifi:7.0/NRD90M/T710XXU2DRB1:user/release-keys
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=gts28wifi
